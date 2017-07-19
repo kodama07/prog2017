@@ -1,0 +1,51 @@
+import turtle
+t=turtle.Turtle()
+
+def rect(x,y,a):
+ t.up()
+ t.home()
+ t.forward(x)
+ t.left(90)
+ t.forward(y)
+ t.down()
+ for i in range(4):
+   t.forward(a)
+   t.left(-90)
+
+
+t.clear()
+rect(10,10,100)
+rect(10,-110,100)
+rect(-110,10,100)
+rect(-110,-100,100)
+
+import random
+
+class Dice:
+ face_num=6
+ def shoot(self):
+   return random.randint(1,self.face_num)
+
+aDice=Dice()#クラスをもとにオブジェクトを作る
+aDice.shoot()#オブジェクトを使う
+
+aDice.face_num=10000
+aDice.shoot()
+
+bDice=Dice()
+bDice.shoot()
+
+オブジェクト指向プログラミング
+クラス　オブジェクトの設計図
+オブジェクト　データの操作をまとめたもの
+クラス派生　クラスをもとに、別のクラスを作る事、新しいクラスは、元のクラスの性質
+
+for i in range(1000):
+ print(i)
+ 
+ 標準出力　画面に出力
+ 「＞」を使ってファイルにリダイレクト
+ 「＞＞」で追記
+ 
+ 標準入力　キーボードから入力
+ 
